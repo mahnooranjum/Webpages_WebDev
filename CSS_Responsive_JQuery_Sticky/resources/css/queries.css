@@ -1,0 +1,225 @@
+
+
+
+/*Query for devices 0-1200px*/
+@media only screen and (max-width: 1200px){
+    .backdrop-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    
+    .row {
+        padding: 0 2%;
+    }
+}
+
+
+/*Query for devices 0-1023px*/
+@media only screen and (max-width: 1023px){
+    body {
+        font-size: 16px;
+    }
+    section{
+        padding: 60px 0;
+    }
+    
+    .long-copy{
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .skillbox{
+        margin-top: 2px;
+    }
+    
+    .skillbox:last-child{
+        margin-top: 2px;
+    }
+    
+    .skill{
+        width: 90%;
+        margin-bottom: 2px;
+    }
+    
+    .screen {
+        width: 70%;
+    }
+    
+
+}
+
+
+/*Query for devices 0-768px*/
+@media only screen and (max-width: 768px){
+    
+    
+    body {
+        font-size: 16px;
+    }
+    section{
+        padding: 30px 0;
+    }
+    
+    .row, 
+    .backdrop-text-box{
+         padding: 0 4%;
+    }
+    
+    .col {width:100%;}
+    
+    .main-nav{
+        margin-top: 10px;
+        float: left;
+        margin-left: 5px;
+    }
+    
+    .main-nav li {
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+        border: 0px;
+        padding: 2px;
+        margin: 0px;
+    }
+    
+    .main-nav li a:hover,
+    .main-nav li a:active{
+        display: block;
+        border: 0px;
+        padding: 2px;
+        margin: 0px;
+
+    }
+    
+    
+    .sticky .main-nav{
+        margin-top: 2px;
+        float: left;
+    }
+    
+     .sticky .main-nav li {
+        display: block;
+    }
+    
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{
+        display: block;
+        border: 0px;
+        padding: 2px;
+        margin: 0px;
+    }
+    
+     .sticky .main-nav li a:hover,
+     .sticky .main-nav li a:active{
+        display: block;
+        border: 0px;
+        padding: 2px;
+        margin: 0px;
+
+    }
+
+    .mobile-nav-icon{
+        display: inline-block;
+    }
+    
+    .box p{
+    padding: 0 40px;
+    }
+    .projects-showcase li{
+        width: 100%;
+        padding: 2% 20%;
+    }
+    h2 {
+        margin-bottom: 40px;
+        margin-top: 20px;
+    
+    }
+    .phone{
+        text-align: center;
+    }
+    
+    .screen{
+        width:40%;
+    }
+    
+    .skill{
+        margin-top: 20px;
+        text-align: center;
+
+    }
+    
+    .centralize{
+        text-align: center;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .box{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .box img{
+        width: 50%;
+    }
+    .box p{
+        padding: 0px 40px;
+    }
+    
+    .experience-top{
+        margin-top: 40px;
+    }
+    
+    .contact-form{
+        text-align: center;
+    }
+    .contact-form input{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    #submission{
+        width: 50%;
+    }
+    
+    .ind-box{
+        float: right; 
+    }
+    
+    .skillbox{
+        margin-left: 6%;
+    }
+
+    footer{
+        text-align: center;
+    }
+    .social-links li{
+        display: block;
+    }
+    
+    .btn-logo{
+        text-align: center;
+        display: block;
+        padding-right: 10%;
+    }
+    .btn-logo img{
+        height: 60px;
+    }
+    
+    .js--main{
+        display: none;
+    }
+    
+    .social-links li:nth-child(even){
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .social-links li:nth-child(odd){
+        margin-left: 10px;
+    }
+    .textLine{
+        text-align: center;
+    }
+
+}
