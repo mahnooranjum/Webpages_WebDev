@@ -15,3 +15,4 @@ Download the repository and open the .html files using:
 | CSS_Responsive  | Using basic CSS with media queries to make a responsive website  | 
 | CSS_Responsive_JQuery_Sticky  | Using Jquery for sticky navigation  | 
 | HTML_Blogpost  | Basic HTML blogpost  | 
+| JS_MemoryGame  | Implementing the Memory Game using JS  | 
