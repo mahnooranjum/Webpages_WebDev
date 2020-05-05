@@ -1,0 +1,23 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin col-x-of-y($span, $of){
+        $temp: calc((100% - ((#{$of} - 1) * #{$gutter-h})) / #{$of});
+        width: calc((#{$span} * #{$temp}) + ((#{$span} - 1) * #{$gutter-h}));
+        float: left;
+        &:not(:last-child){
+            margin-right: $gutter-h;
+        }
+}
+
+@mixin text-clippy{
+        background-image: linear-gradient(to right, $primary-light, $primary-dark);
+        display: inline-block;
+        -webkit-background-clip: text;
+        color: transparent;
+}
