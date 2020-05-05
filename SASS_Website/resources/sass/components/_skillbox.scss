@@ -1,0 +1,30 @@
+.skill-box{
+    
+    background-color: rgba($white, 0.8);
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3rem 4rem rgba($black, 0.4);
+    height: 40rem;
+    transition: all 0.2s;
+    .heading-tertiary{
+        height: 8rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid $primary;
+        border-top: 1px solid $primary;
+    }
+    
+    &__icon{
+        font-size: 6rem;
+        @include text-clippy;
+    }
+    
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 0 2rem 6rem rgba($black, 0.6);
+
+    }
+
+}
