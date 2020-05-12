@@ -16,3 +16,5 @@ Download the repository and open the .html files using:
 | CSS_Responsive_JQuery_Sticky  | Using Jquery for sticky navigation  | 
 | HTML_Blogpost  | Basic HTML blogpost  | 
 | JS_MemoryGame  | Implementing the Memory Game using JS  | 
+| SASS_Website  | SCSS Website | 
+| SASS_Website_Navigation  | SCSS Website with Navigation and Popups | 
