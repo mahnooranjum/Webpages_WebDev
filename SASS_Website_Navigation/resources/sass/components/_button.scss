@@ -1,0 +1,137 @@
+.btn{
+    &:link,
+    &:visited {
+        padding: 1rem 4rem;
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+    }
+
+    &:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4); 
+    }
+    &:active{
+        transform: translateY(-.2rem);
+        box-shadow: 0 0.6rem 1rem rgba(0,0,0,.4); 
+    }
+
+    &--white {
+        background-color: $white;
+        color: #444444;
+    }
+
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+
+    &-white{
+        &::after{
+            background-color: $white;
+        }
+    }
+    
+    
+    &:hover{
+        &::after{
+            transform: scaleX(1.5) scaleY(1.8);
+            opacity: 0;
+        }   
+    }
+    
+    &--animated{
+        animation: moveInBottom .4s ease-out .2s backwards;
+    }   
+    }
+
+.text-btn{
+    &:link, 
+    &:visited {
+        padding: 1rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        border: 1px solid $primary-light;
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        @include text-clippy
+        transition: all 0.2s;
+        }
+    
+    &:hover{
+        box-shadow: 0 2rem 4rem rgba($black, 0.2);
+        transform: translateY(-3px);
+    }
+    
+    &:active{
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        transform: translateY(0px);
+    }
+    
+}
+
+
+.card-btn{
+    &:link, 
+    &:visited{
+        color: $white;
+        font-size: 1.6rem;
+        width: 70%;
+        padding: 1rem;
+        border-radius: 40px;
+        border: 1px solid $white;
+        background-image:  linear-gradient( to right bottom,
+                            rgba($white, 0.1),
+                            rgba($white, 0.2));
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        transition: all 0.2s;
+    }
+        
+    &:hover{
+        box-shadow: 0 3rem 4rem rgba($black, 0.2);
+    }
+    
+    &:active{
+        box-shadow: 0 2rem 2rem rgba($black, 0.2);
+    }
+    
+}
+
+.experience__button{
+    text-align: center;
+}
+
+.form__group--button{
+        width: 80%;
+        margin-top: 4rem;
+        padding: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        border: 1px solid $primary-light;
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        @include text-clippy
+        transition: all 0.2s;
+        
+    
+    &:hover{
+        box-shadow: 0 2rem 4rem rgba($black, 0.2);
+        transform: translateY(-3px);
+    }
+    
+    &:active{
+        box-shadow: 0 1rem 2rem rgba($black, 0.2);
+        transform: translateY(0px);
+    }
+}
+
