@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Chart JS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <title>ChartJS Course</title>
+    </head>
+    
+    <body class="bg-primary">
+        <h1>Chart Options!</h1>
+
+        <div class="m-5">
+            <div class="card col-md-6 offset-md-3">
+                <canvas id="displayFirstChart">
+                    <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="25" height="25">
+                </canvas>
+            </div>
+        </div>
+
+        
+
+        <script>
+            var firstChart = document.getElementById("displayFirstChart").getContext("2d");
+            const image = document.getElementById('source');
+
+            var chart = new Chart(firstChart, {
+                // The type of chart we want to create
+                type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'Richie', 'May', 'June', 'July', 'August'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: 'rgba(255, 99, 132, .8)',
+                    borderColor: 'blue',
+                    borderWidth: "2",
+                    borderDash: [20],
+                    // borderDashOffset: 20,
+                    borderJoinStyle: "round",
+                    borderCapStyle: "round",
+                    // cubicInterpolationMode: "default",
+                    fill: "origin",
+                    lineTension: .2,
+                    // pointBackgroundColor: ["red", "green", "blue", "yellow", "purple"],
+                    pointBorderColor: ["red", "blue", "blue", "yellow", "purple"],
+                    pointBorderWidth: [15, 18, 10, 13, 15, 18, 13, 15],
+                    pointRadius: 10,
+                    pointStyle: [image, "cross", "star", "crossRot", "dash", "line", "rect", "triangle"],
+                    pointHitRadius: 10,
+                    pointHoverBackgroundColor: "pink",
+                    pointHoverBorderColor: "black",
+                    pointHoverBorderWidth: 1,
+                    pointHoverRadius: 20,
+                    showLine: true,
+                    spanGaps: false,
+                    data: [0, 10, 5, 2, , 30, 45, 20]
+                },{
+                    label: 'Missing Data',
+                    backgroundColor: 'rgb(0, 99, 132)',
+                    borderColor: "blue",
+                    data: [, , , 2, 15, 30, , 20]
+                },
+                {
+                    label: 'Dataset 3',
+                    steppedLine: true,
+                    backgroundColor: 'purple',
+                    borderColor: 'rgb(0, 99, 132)',
+                    borderWidth: "5",
+                    borderDash: [10, 5],
+                    borderDashOffset: 0,
+                    data: [10, 10, 15, 12, 26, 36, 45, 18]
+                }
+                ]
+            },
+
+            // Configuration options go here
+            options: {}
+            });
+        </script>
+    </body>
+</html>
