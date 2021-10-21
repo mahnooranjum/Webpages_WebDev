@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Chart JS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <title>ChartJS Course</title>
+    </head>
+    
+    <body class="bg-primary">
+        <h1>Stacked Area Chart!</h1>
+
+        <div class="m-5">
+            <div class="card col-md-6 offset-md-3">
+                <canvas id="displayFirstChart">
+                    <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="25" height="25">
+                </canvas>
+            </div>
+        </div>
+
+        
+
+        <script>
+            var firstChart = document.getElementById("displayFirstChart").getContext("2d");
+            const image = document.getElementById('source');
+
+            var chart = new Chart(firstChart, {
+                // The type of chart we want to create
+                type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'Richie', 'May', 'June', 'July', 'August'],
+            datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: 'purple',
+                    borderColor: 'rgb(0, 99, 132)',
+                    borderWidth: "5",
+                    borderDashOffset: 0,
+                    data: [10, 10, 15, 12, 26, 36, 45, 18]
+                },{
+                    label: 'Dataset 2',
+                    backgroundColor: 'pink',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [10, 10, 15, 12, 26, 36, 45, 18]
+                }
+                ]
+            },
+
+            // Configuration options go here
+            options: {
+                scales: {
+                yAxes: [{
+                    stacked: true
+                    }]
+                }
+            }
+});
+        </script>
+    </body>
+</html>
