@@ -8,7 +8,7 @@ async function getData(){
     // document.getElementById('sample-text').innerHTML = data;
     var rows = data.split('\n').slice(1);
     rows.forEach( row => {
-        cell = row.split(',') 
+        col = row.split(',') 
         
         console.log(cell[1] + ', '+ cell[3])
 
