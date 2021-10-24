@@ -53,7 +53,7 @@ function getChart() {
         }]
     };
     
-    typeGraph = 'line';
+    typeGraph = 'bar';
     const config = {
         type: typeGraph,
         data: data,
