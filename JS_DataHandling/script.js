@@ -13,15 +13,15 @@ function getRandomColor() {
   }
   
 
-labels = []
-dataArray = []
 
-getData().then(()=>{
-    getChart()
-})
+// getData().then(()=>{
+//     getChart()
+// })
 
 async function getData(){
-  
+    xs = []
+    ys = []
+
       const response = await fetch('data/train_house.csv');
       const data = await response.text();
       // document.getElementById('sample-text').innerHTML = data;
@@ -29,31 +29,34 @@ async function getData(){
       rows.forEach( row => {
           col = row.split(',')  
           console.log(col[1] + ', '+ col[3])
-          labels.push(col[1])
-          dataArray.push(col[3])
+          xs.push(col[1])
+          ys.push(col[3])
+          
       })
+      return {xs, ys}
   }
 
 
 
-function getChart() {
+async function getChart() {
+    const dataset = await getData();
     var legends = ['My First Dataset'];
     const color =  getRandomColor();
     // console.log(colors)
     // console.log(strokeColors)
     
     const data = {
-        labels: labels,
+        labels: dataset.xs,
         datasets: [{
             label: legends,
             backgroundColor: color,
             borderWidth: 1,
-            data: dataArray,
+            data: dataset.ys,
             minBarLength: 3,
         }]
     };
     
-    typeGraph = 'bar';
+    typeGraph = 'scatter';
     const config = {
         type: typeGraph,
         data: data,
@@ -68,3 +71,4 @@ function getChart() {
     
 }
 
+getChart()
