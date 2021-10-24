@@ -12,77 +12,59 @@ function getRandomColor() {
 
   }
   
-const labels = [
-                'January',
-                'February',
-                'March',
-                'April',
-                'May',
-                'June',
-                ];
 
+labels = []
+dataArray = []
 
-getData().catch(error =>{
-                    console.log(error);
-                    })
+getData().then(()=>{
+    getChart()
+})
+
+async function getData(){
   
-  async function getData(){
       const response = await fetch('data/train_house.csv');
       const data = await response.text();
       // document.getElementById('sample-text').innerHTML = data;
       var rows = data.split('\n').slice(1);
       rows.forEach( row => {
-          col = row.split(',') 
-          
-          console.log(cell[1] + ', '+ cell[3])
-  
+          col = row.split(',')  
+          console.log(col[1] + ', '+ col[3])
+          labels.push(col[1])
+          dataArray.push(col[3])
       })
   }
-  
-  
-  
-
-var dataArray = [10, 20, 5, 2, 80, 30, 45];
-var legends = ['My First Dataset'];
-
-const tints = ColorTranslator.getTints(getRandomColor(), dataArray.length);
-var colors = []; 
-var strokeColors = []; 
-tints.forEach((c) => {
-    colors.push('#05' + c.slice(1));
-    strokeColors.push('#AF' + c.slice(1));
-});
-
-// console.log(colors)
-// console.log(strokeColors)
-
-const data = {
-    labels: labels,
-    datasets: [{
-        label: legends,
-        backgroundColor: colors,
-        borderColor: strokeColors,
-        borderWidth: 3,
-        data: dataArray,
-        minBarLength: 3,
-        fill: true
-    }]
-};
 
 
 
-typeGraph = 'bar';
-
-const selectElement = document.querySelector('.custom-select');
-const config = {
-    type: typeGraph,
-    data: data,
-    options: {}
-  };
-
-var myChart = new Chart(
-    document.getElementById('sample-chart'),
-    config
-  );
-
+function getChart() {
+    var legends = ['My First Dataset'];
+    const color =  getRandomColor();
+    // console.log(colors)
+    // console.log(strokeColors)
+    
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: legends,
+            backgroundColor: color,
+            borderWidth: 1,
+            data: dataArray,
+            minBarLength: 3,
+        }]
+    };
+    
+    typeGraph = 'line';
+    const config = {
+        type: typeGraph,
+        data: data,
+        options: {}
+      };
+    
+    var myChart = new Chart(
+        document.getElementById('sample-chart'),
+        config
+      );
+    
+    
+}
 
