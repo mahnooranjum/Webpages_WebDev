@@ -4,10 +4,11 @@ body{
     margin: auto;
 }
 .container {
-
+    display: flex;
     border: 2px solid black;
     margin: 100px;
     align-items: stretch;
+    justify-content: center;
 
 
 }
