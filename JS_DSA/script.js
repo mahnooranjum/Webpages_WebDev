@@ -1,18 +1,34 @@
+array1 = ['a', 'b', 'c', 'd']
+array2 = ['e', 'f', 'z']
 
-// const items = ['id1'];
-// const items = new Array(1000).fill('id1')
-const items = new Array(100000).fill('id1')
+// // O(n * m)
+// function getIntersection(arr1, arr2){
+//     for (let i = 0; i < arr1.length; i++){
+//         for (let j = 0; j < arr2.length; j++){
+//             if (arr1[i] == arr2[j]){
+//                 return true
+//             }
+//         }
+//     }
+//     return false
+// }
 
-function findItem(array, toFind) {
-  let t0 = performance.now();
-  for (let i = 0; i < array.length; i++){
-    if(array[i] === toFind) {
-      console.log("found " + toFind);
+
+// O(n + m)
+function getIntersection(arr1, arr2){
+    let map = {}
+    for (let i = 0; i < arr1.length; i++){
+        if (!map[arr1[i]]){
+            map[arr1[i]] = true
+        }
     }
-   }
-
-  let t1 = performance.now();
-  console.log("[INFO]: executed in "+ (t1 - t0) + " seconds")
+    
+    for (let j = 0; j < arr2.length; j++){
+        if (map[arr2[j]]){
+            return true
+        }
+    }
+    return false
 }
 
-findItem(items, 'id1')
+console.log(getIntersection(array1, array2))
