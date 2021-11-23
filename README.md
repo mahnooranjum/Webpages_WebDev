@@ -17,4 +17,7 @@ Download the repository and open the .html files using:
 | HTML_Blogpost  | Basic HTML blogpost  | 
 | JS_MemoryGame  | Implementing the Memory Game using JS  | 
 | SASS_Website  | SCSS Website | 
-| SASS_Website_Navigation  | SCSS Website with Navigation and Popups | 
+| SASS_Website_Navigation  | SCSS Website with Navigation and Popups |
+| JS_Charts | ChartJS implementations |
+| JS_DataHandling | Data fetching, handling and graphing in JS | 
+| JS_LearnersPath | JavaScript - The Rite of Passage | 
