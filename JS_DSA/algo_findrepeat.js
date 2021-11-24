@@ -1,4 +1,5 @@
-
+// M O(n)
+// S O(n)
 function findRecurring(arr){
     let map = {}
     for (let i = 0; i < arr.length; i++){
