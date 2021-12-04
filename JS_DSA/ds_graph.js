@@ -14,7 +14,7 @@
 // Adjacent matrix 
 // indicate if x has connection to y 
 
-class Graph{
+class Graph{ 
     constructor(){
         this.numberOfNodes = 0;
         this.adjList = {};
