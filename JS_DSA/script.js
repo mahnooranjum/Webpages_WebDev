@@ -1,74 +1,48 @@
-// Queue 
+// Graphs 
+// directed / undirected 
+// cyclic / acyclic 
+// weighted / unweighted 
 
-// FIFO 
-// first in first out 
 
-// Lookup   O(1)
-// Enqueue  O(1)
-// Dequeue  O(1)
-// Peek     O(1)
+// Edge list 
+// lists all connections b/w nodes of graphs 
 
-// If we use arrays we will have to unshift O(n) in dequeue 
+// Adjacent list 
+// Index is the node
+// Value is the node neighbors 
 
-class Node {
-    constructor(value){
-        this.value = value
-        this.next = null
-    }
-}
+// Adjacent matrix 
+// indicate if x has connection to y 
 
-class Queue {
+class Graph{
     constructor(){
-        this.first = null
-        this.last = null
-        this.length = 0
+        this.numberOfNodes = 0;
+        this.adjList = {};
     }
-
-    enqueue(value){
-        var node = new Node(value)
-        if (this.length === 0){
-            this.first = node
-            this.last = node 
-        }else {
-            this.last.next = node
-            this.last = node
-        }
-
-        this.length++
+    addVertex(node){
+        this.adjList[node] = []
+        this.numberOfNodes++
         return this
     }
 
-    peek(){
-        return this.first.value
-    }
-
-    dequeue(){
-        this.length = this.length - 1
-        this.first = this.first.next
+    addEdge(node1, node2){
+        this.adjList[node1].push(node2)
+        this.adjList[node2].push(node1)
         return this
     }
 
     printer(){
-        let cur = this.first
-        var stringer = ""
-        while (cur !== null){
-            stringer = stringer + cur.value + " -> "
-            cur = cur.next
-        }
-        stringer = stringer + " NULL"
-        console.log(stringer)
+        console.log(this.adjList)
     }
 }
 
+var myGraph = new Graph()
+myGraph.addVertex('1')
+myGraph.addVertex('2')
+myGraph.addVertex('3')
+myGraph.addVertex('4')
+myGraph.addEdge('1', '2')
+myGraph.addEdge('3', '2')
+myGraph.addEdge('4', '2')
 
-var q = new Queue()
-q.printer()
-q.enqueue(1)
-q.printer()
-q.enqueue(2)
-q.printer()
-q.enqueue(3)
-q.printer()
-q.dequeue()
-q.printer()
-console.log(q.peek())
+myGraph.printer()
