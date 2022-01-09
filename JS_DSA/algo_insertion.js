@@ -1,5 +1,9 @@
 
-
+// for small data 
+// for data within a certain range, use radix or counting sort
+// use when almost sorted
+// fixed length integers: 
+// basically any non-comparison sort 
 const arr = [2,5,99, 7,9,1,10,11,26,3,1]
 
 function insertionSort(arr) {

@@ -1,5 +1,7 @@
 
-
+// efficient sorting 
+// if O(n) space complexity is bad, use quick sort 
+// 
 const arr = [2,5,99, 7,9,1,10,11,26,3,1]
 
 function mergeSort(arr) {
